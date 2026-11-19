@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#EAF4F0">
+    <title>VistaConsciente | Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+<div class="panel-aplicacion">
+
+    <!-- MENÚ LATERAL WEB -->
+    <aside class="barra-lateral">
+        <a class="marca-lateral" href="inicio.html">
+            <span class="icono-marca"><span class="material-symbols-outlined">visibility</span></span>
+            <span class="texto-marca"><small>BIENESTAR VISUAL</small><strong>VistaConsciente</strong></span>
+        </a>
+
+        <nav class="navegacion-lateral" aria-label="Navegación principal">
+            <a class="enlace-navegacion seleccionado" href="inicio.html"><span class="material-symbols-outlined">home</span>Inicio</a>
+            <a class="enlace-navegacion" href="historial.html"><span class="material-symbols-outlined">history</span>Historial</a>
+            <a class="enlace-navegacion" href="molestias.html"><span class="material-symbols-outlined">article</span>Molestias</a>
+            <a class="enlace-navegacion" href="perfil.html"><span class="material-symbols-outlined">person</span>Perfil</a>
+        </nav>
+
+        <div class="usuario-lateral">
+            <span class="avatar">LM</span>
+            <span><strong>Laura Martínez</strong><small>Perfil visual activo</small></span>
+        </div>
+        <a class="volver-bienvenida" href="../bienvenida/bienvenida.html">
+            <span class="material-symbols-outlined">arrow_back</span>Volver a la bienvenida
+        </a>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido-principal">
+        <header class="encabezado-pagina">
+            <div>
+                <p class="sobretitulo">VISTACONSCIENTE</p>
+                <h1>Inicio</h1>
+            </div>
+            <div class="estado-sesion" id="estado-sesion">
+                <span class="material-symbols-outlined">schedule</span>
+                <span id="texto-estado-global">Sin sesión activa</span>
+            </div>
+            <div class="avatar-movil" aria-label="Perfil de Laura">LM</div>
+        </header>
+
+        <!-- RESUMEN DEL DÍA -->
+        <section class="fila-resumen" aria-label="Resumen del día">
+            <article class="tarjeta-exposicion">
+                <div class="datos-exposicion">
+                    <p class="etiqueta-clara">EXPOSICIÓN ACUMULADA HOY</p>
+                    <strong class="tiempo-exposicion">2h 14m</strong>
+                    <span class="comparacion">32 min menos que ayer</span>
+                </div>
+                <div class="meta-circular">
+                    <div class="anillo-progreso" id="anillo-progreso"><span id="porcentaje-circular">0%</span></div>
+                    <div class="texto-meta"><strong>Meta diaria de pausas</strong><small id="texto-pausas-completadas">0 de 5 completadas</small></div>
+                </div>
+            </article>
+
+            <article class="tarjeta-resumen">
+                <p class="etiqueta">RESUMEN</p>
+                <div class="datos-resumen">
+                    <div><strong id="numero-meta-pausas">5</strong><small>Pausas meta</small></div>
+                    <div><strong id="porcentaje-cumplimiento">0%</strong><small>Cumplimiento</small></div>
+                </div>
+                <div class="barra-cumplimiento"><span id="barra-progreso-cumplimiento"></span></div>
+            </article>
+        </section>
+
+        <!-- NUEVA ACTIVIDAD Y REGISTRO RÁPIDO -->
+        <section class="fila-actividad">
+            <article class="tarjeta-sesion">
+                <div id="preparacion-sesion">
+                    <p class="etiqueta">NUEVA ACTIVIDAD</p>
+                    <h2>Prepara tu sesión</h2>
+
+                    <div class="selector-actividad" role="group" aria-label="Tipo de actividad">
+                        <button type="button" class="opcion-actividad activa" data-actividad="Estudio">Estudio</button>
+                        <button type="button" class="opcion-actividad" data-actividad="Trabajo">Trabajo</button>
+                    </div>
+
+                    <div class="preferencias-sesion">
+                        <label class="preferencia">
+                            <span><strong>Alta concentración</strong><small id="ayuda-concentracion">Avisos discretos</small></span>
+                            <span class="interruptor"><input type="checkbox" id="alta-concentracion"><span class="deslizador"></span></span>
+                        </label>
+                        <label class="preferencia">
+                            <span><strong>Alta carga académica</strong><small id="ayuda-carga">Pausas reforzadas</small></span>
+                            <span class="interruptor"><input type="checkbox" id="alta-carga"><span class="deslizador"></span></span>
+                        </label>
+                    </div>
+
+                    <button type="button" class="boton-iniciar boton-iniciar-preparacion" id="boton-sesion">
+                        <span class="material-symbols-outlined">play_arrow</span>
+                        <span id="texto-boton-sesion">Iniciar sesión de Estudio</span>
+                    </button>
+                </div>
+
+                <div class="panel-sesion-activa" id="panel-sesion-activa" hidden>
+                    <div class="encabezado-sesion-activa">
+                        <div>
+                            <p class="etiqueta" id="estado-sesion-texto">ESTUDIO EN CURSO</p>
+                            <h2>Mantén un ritmo saludable</h2>
+                        </div>
+                        <span class="duracion-sesion" id="duracion-sesion">00:00</span>
+                    </div>
+
+                    <div class="temporizador-pausa">
+                        <span>TIEMPO RESTANTE</span>
+                        <strong id="cuenta-pausa">45:00</strong>
+                    </div>
+
+                    <div class="controles-sesion">
+                        <button type="button" class="boton-control boton-principal-control" id="pausar-sesion">
+                            <span class="material-symbols-outlined">pause</span><span>Pausar</span>
+                        </button>
+                        <button type="button" class="boton-control boton-principal-control" id="reanudar-descanso" hidden>
+                            <span class="material-symbols-outlined">play_arrow</span><span>Continuar pausa</span>
+                        </button>
+                        <button type="button" class="boton-control boton-principal-control boton-iniciar-pausa" id="iniciar-pausa">
+                            <span class="material-symbols-outlined">visibility</span><span>Iniciar pausa</span>
+                        </button>
+                        <button type="button" class="boton-control boton-principal-control" id="accion-fin-descanso" hidden>
+                            <span class="material-symbols-outlined">play_arrow</span><span>Continuar sesión</span>
+                        </button>
+                        <button type="button" class="boton-control" id="finalizar-sesion">
+                            <span class="material-symbols-outlined">stop</span><span>Finalizar</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tarjeta-registro">
+                <div class="icono-registro"><span class="material-symbols-outlined">visibility</span></div>
+                <p class="etiqueta">REGISTRO RÁPIDO</p>
+                <h2>¿Sientes alguna molestia?</h2>
+                <p class="descripcion-registro">Registra síntomas, intensidad y actividad relacionada en menos de un minuto.</p>
+                <button type="button" class="boton-registro" id="abrir-modal-molestia">Registrar molestia</button>
+            </article>
+        </section>
+
+        <!-- RECOMENDACIONES -->
+        <section class="seccion-recomendaciones">
+            <p class="etiqueta">CUIDA TU VISTA</p>
+            <h2>Recomendaciones preventivas</h2>
+
+            <div class="lista-recomendaciones">
+                <article class="tarjeta-recomendacion">
+                    <span class="icono-recomendacion material-symbols-outlined">visibility</span>
+                    <div><h3>Regla 20-20-20</h3><p>Mira a 6 metros durante 20 segundos.</p></div>
+                </article>
+                <article class="tarjeta-recomendacion">
+                    <span class="icono-recomendacion material-symbols-outlined">light_mode</span>
+                    <div><h3>Ajusta la luz</h3><p>Evita reflejos directos en tu pantalla.</p></div>
+                </article>
+                <article class="tarjeta-recomendacion">
+                    <span class="icono-recomendacion material-symbols-outlined">water_drop</span>
+                    <div><h3>Hidrátate</h3><p>Beber agua ayuda a reducir la sequedad.</p></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- MODAL: CONFIGURAR TIEMPO HASTA LA PRÓXIMA PAUSA -->
+    <div class="fondo-modal" id="modal-duracion-sesion" aria-hidden="true" hidden>
+        <section class="modal-duracion" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-duracion">
+            <button type="button" class="cerrar-modal" id="cerrar-modal-duracion" aria-label="Cerrar">×</button>
+            <span class="icono-modal-duracion material-symbols-outlined">schedule</span>
+            <p class="etiqueta">CONFIGURA TU SESIÓN</p>
+            <h2 id="titulo-modal-duracion">¿Cuánto tiempo deseas trabajar?</h2>
+            <p class="descripcion-modal">Este será el tiempo de concentración antes de que te avisemos que es momento de descansar.</p>
+            <div class="duracion-actual">
+                <span>Frecuencia configurada</span>
+                <strong id="duracion-guardada">45 min</strong>
+            </div>
+            <label class="campo-duracion" for="nueva-duracion-sesion">Tiempo hasta la próxima pausa (minutos)</label>
+            <input type="number" id="nueva-duracion-sesion" min="1" max="120" step="1" inputmode="numeric">
+            <small class="error-modal" id="error-duracion-sesion" role="alert"></small>
+            <div class="acciones-modal">
+                <button type="button" class="boton-modal-secundario" id="cancelar-modal-duracion">Cancelar</button>
+                <button type="button" class="boton-modal-principal" id="confirmar-modal-duracion">Iniciar sesión</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- MODAL: CONFIRMAR FINALIZACIÓN DE SESIÓN -->
+    <div class="fondo-modal" id="modal-confirmar-finalizacion" aria-hidden="true" hidden>
+        <section class="modal-duracion modal-confirmacion" role="dialog" aria-modal="true" aria-labelledby="titulo-confirmar-finalizacion">
+            <button type="button" class="cerrar-modal" id="cerrar-modal-finalizacion" aria-label="Cerrar">×</button>
+            <span class="icono-modal-duracion material-symbols-outlined">flag</span>
+            <p class="etiqueta">FINALIZAR SESIÓN</p>
+            <h2 id="titulo-confirmar-finalizacion">¿Deseas finalizar esta sesión?</h2>
+            <p class="descripcion-modal">Se cerrará la sesión actual y se reiniciará el temporizador. Esta acción no se puede deshacer.</p>
+            <div class="acciones-modal">
+                <button type="button" class="boton-modal-secundario" id="cancelar-finalizacion">Seguir sesión</button>
+                <button type="button" class="boton-modal-principal" id="confirmar-finalizacion">Finalizar sesión</button>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- MODAL: REGISTRAR MOLESTIA -->
+    <div class="fondo-modal fondo-modal-molestia" id="modal-registrar-molestia" aria-hidden="true" hidden>
+        <section class="modal-molestia" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-molestia">
+            <p class="marca-modal-molestia">VISTACONSCIENTE</p>
+            <h2 id="titulo-modal-molestia">¿Cómo están tus ojos?</h2>
+            <p class="subtitulo-modal-molestia">SELECCIONA TUS MOLESTIAS</p>
+            <div class="opciones-molestia" id="opciones-molestia" role="group" aria-label="Molestias">
+                <button type="button" class="opcion-molestia" aria-pressed="false">Ardor</button>
+                <button type="button" class="opcion-molestia" aria-pressed="false">Sequedad</button>
+                <button type="button" class="opcion-molestia" aria-pressed="false">Fatiga</button>
+                <button type="button" class="opcion-molestia" aria-pressed="false">Visión borrosa</button>
+                <button type="button" class="opcion-molestia" aria-pressed="false">Dolor de cabeza</button>
+            </div>
+            <div class="intensidad-molestia">
+                <div class="encabezado-intensidad"><label for="intensidad-molestia">Intensidad de molestia</label><output id="valor-intensidad-molestia" for="intensidad-molestia">3 / 10</output></div>
+                <input type="range" id="intensidad-molestia" min="1" max="10" value="3" step="1">
+                <p>Se vinculará automáticamente con <strong id="actividad-molestia">Estudio</strong> y la hora actual.</p>
+            </div>
+            <small class="error-molestia" id="error-molestia" role="alert"></small>
+            <div class="acciones-modal-molestia">
+                <button type="button" class="boton-cancelar-molestia" id="cancelar-modal-molestia">Cancelar</button>
+                <button type="button" class="boton-guardar-molestia" id="guardar-modal-molestia" disabled>Guardar registro</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- NAVEGACIÓN INFERIOR MÓVIL -->
+    <nav class="navegacion-inferior" aria-label="Navegación móvil">
+        <a class="seleccionado" href="inicio.html"><span class="material-symbols-outlined">home</span><small>Inicio</small></a>
+        <a href="historial.html"><span class="material-symbols-outlined">history</span><small>Historial</small></a>
+        <a href="molestias.html"><span class="material-symbols-outlined">article</span><small>Molestias</small></a>
+        <a href="perfil.html"><span class="material-symbols-outlined">person</span><small>Perfil</small></a>
+    </nav>
+</div>
+</body>
+</html>
