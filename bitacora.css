@@ -1,0 +1,166 @@
+/* bitacora.css */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    line-height: 1.6;
+}
+
+.header-bitacora {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.logo-bitacora {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.badged-ods {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.info-curso h1 {
+    margin: 10px 0 5px 0;
+    font-size: 26px;
+    color: #0F172A;
+}
+
+.info-curso p {
+    color: #64748B;
+    margin: 0;
+}
+
+.contenedor-bitacora {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tarjeta-semana {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.tarjeta-semana:hover {
+    transform: translateY(-2px);
+}
+
+.tarjeta-semana.destacada {
+    border-color: #8FDC92;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
+}
+
+.tarjeta-semana.futura {
+    opacity: 0.6;
+    border-style: dashed;
+}
+
+.semana-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.tag-semana {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag-semana.verde {
+    background-color: #2E7D32;
+}
+
+.tag-semana.gris {
+    background-color: #64748B;
+}
+
+.semana-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.lista-logros {
+    padding-left: 20px;
+    color: #475569;
+}
+
+.lista-logros li {
+    margin-bottom: 8px;
+}
+
+.semana-footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    border-top: 1px solid #F1F5F9;
+    padding-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-ver-demo {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0F172A;
+    background-color: #F1F5F9;
+    transition: background 0.2s;
+}
+
+.btn-ver-demo.primario {
+    background-color: #2E7D32;
+    color: #FFFFFF;
+}
+
+.btn-ver-demo:hover {
+    opacity: 0.9;
+}
+
+.texto-pendiente {
+    color: #94A3B8;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.footer-creditos {
+    text-align: center;
+    padding: 20px;
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+    .semana-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .semana-footer {
+        justify-content: flex-start;
+    }
+}
