@@ -1,0 +1,149 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F8FAFC; 
+    color: #0F172A;            
+    display: flex;             
+    min-height: 100vh;
+}
+
+       
+.siderbar {
+    width: 220px;
+    background-color: #FFFFFF; 
+    border-right: 1px solid #E2E8F0; 
+    padding: 20px;
+}
+
+.siderbar ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.siderbar a {
+    display: block;
+    padding: 10px;
+    color: #64748B; 
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+ 
+.siderbar a.activo {
+    background-color: #E8F5E9; 
+    color: #2E7D32;            
+    font-weight: bold;
+}
+
+.usuario-info small {
+     display: block;
+    color: #2E7D32; 
+}
+
+
+.contenido-principal {
+    flex: 1; 
+    padding: 20px 40px;
+}
+
+.topbar {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+mark {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+
+.tarjeta-formulario {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.fila-inputs {
+    display: flex; 
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.grupo-input {
+    flex: 1;
+}
+
+.grupo-input label {
+    display: block;
+    font-size: 12px;
+    color: #64748B; 
+    margin-bottom: 6px;
+}
+
+.grupo-input input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+}
+
+.btn-intercambiar {
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.fila-boton {
+    text-align: right;
+    margin-top: 20px;
+}
+
+        
+.btn-primario {
+    background-color: #0F172A; /* Azul medianoche / casi negro */
+    color: #FFFFFF;            /* Letra blanca */
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+}
+
+     
+.seccion-recientes h2 {
+    font-size: 14px;
+    color: #64748B;
+    margin-top: 30px;
+}
+
+.grid-tarjetas {
+    display: flex; /* Pone las 3 tarjetas una al lado de la otra */
+    gap: 20px;
+}
+
+.tarjeta-recientes {
+    flex: 1;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.tarjeta-iconos {
+    display: flex;
+    justify-content: space-between;
+    color: #64748B;
+}
+
+.tarjeta-recientes p {
+    color: #64748B; 
+    font-size: 14px;
+    margin: 0;
+}
