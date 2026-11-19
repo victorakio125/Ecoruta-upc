@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ecoruta.css">
+    <title>EcoRuta - Optimización de ruta consciente</title>
+</head>
+<body>
 
+    <aside class="siderbar">
+        <div class="logo">
+            <span>🍃</span>
+            <strong>EcoRuta</strong>
+        </div>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio" class="activo">🏠 Inicio</a></li>
+            <li><a href="rutas.html">📍 Rutas</a></li>
+            <li><a href="#historial">🕒 Historial</a></li>
+            <li><a href="#perfil">👤 Perfil</a></li>
+        </ul>
+    </nav>
+    
+    <div class="sidebar-footer">
+        <a href="#configuracion">⚙️ Configuraicon</a>
+        <div class="usuario-info">
+            <span>👤</span>
+            <div>
+                <strong>Usuario EcoRuta</strong>
+                <small>Nivel 4</small>
+            </div>
+        </div>
+    </div>
+    </aside>
+
+    <main class="contenido-principal">
+        <header class="topbar">
+            <span>Inicio</span>
+            <div>
+                <span>Optimizacion de ruta consciente</span>
+                <mark>LO-FI</mark>
+            </div>
+        </header>
+
+        <section class="seccion-buscar">
+            <h1>Buscar Rutas</h1>
+            <p>Encuentra una alternativa sostenible para tu primer trayecto</p>
+
+            <form action="#" class="tarjeta-formulario">
+                <div class="fila-inputs">
+                    <div class="grupo-input">
+                        <label for="origen">Origen</label>
+                        <input type="text" id="origen" name="origen" value="Casa">
+                    </div>
+
+                    <button type="button" class="btn-intercambiar">⇅</button>
+                    
+                <div class="grupo-input">
+                    <label for="destino">Destino</label>
+                    <input type="text" id="destino" name="destino" value="Oficina Centro">
+                </div>
+
+                </div>
+
+                <div class="fila-boton">
+                    <button type="submit" class="btn-primario">Buscar Rutas</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="seccion-recientes">
+            <h2>Recientes</h2>
+            <div class="grid-tarjetas">
+                <article class="tarjeta-recientes">
+                    <div class="tarjeta-iconos">
+                        <span>🕒</span>
+                        <span>></span>
+                    </div>
+                    <h3>Oficina Centro</h3>
+                    <p>Mi Ubicacion</p>
+                </article>
+
+                <article class="tarjeta-recientes">
+                    <div class="tarjeta-iconos">
+                        <span>🕒</span>
+                        <span>></span>
+                    </div>
+                    <h3>Supermercado Eco</h3>
+                    <p>Desde Casa</p>
+                </article>
+                
+                <article class="tarjeta-recientes">
+                    <div class="tarjeta-iconos">
+                        <span>🕒</span>
+                        <span>></span>
+                    </div>
+                    <h3>Parque metropolitano</h3>
+                    <p>Desde Estacion del Tren</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

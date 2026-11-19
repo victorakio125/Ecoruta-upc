@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ecoruta.css">
+    <title>EcoRuta - Detalle de Ruta</title>
+</head>
+<body>
+
+    <aside class="siderbar">
+        <div class="logo">
+            <span>🍃</span>
+            <strong>EcoRuta</strong>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="rutas.html" class="activo">📍 Rutas</a></li>
+                <li><a href="#historial">🕒 Historial</a></li>
+                <li><a href="#perfil">👤 Perfil</a></li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="#configuracion">⚙️ Configuración</a>
+            <div class="usuario-info">
+                <span>👤</span>
+                <div>
+                    <strong>Usuario EcoRuta</strong>
+                    <small>Nivel 4</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="contenido-principal">
+        
+        <header class="topbar">
+            <span>Rutas / Detalle de Ruta</span>
+            <div>
+                <span>Optimización de ruta consciente</span>
+                <mark>LO-FI</mark>
+            </div>
+        </header>
+
+        <section class="seccion-detalle">
+            <div class="encabezado-detalle">
+                <h1>Detalle de Ruta</h1>
+                <a href="rutas.html" class="volver-ruta">← Casa ➔ Oficina Centro</a>
+            </div>
+
+            <div class="grid-detalle">
+                
+                <div class="caja-mapa">
+                    <div class="wireframe-mapa">
+                        <span>MAPA WIREFRAME</span>
+                        <div class="linea-ruta"></div>
+                    </div>
+                    <div class="leyenda-mapa">
+                        <span>⚪ Casa</span>
+                        <span>🚩 Oficina Centro</span>
+                    </div>
+                </div>
+
+                <div class="caja-panel-derecho">
+                    
+                    <div class="grid-metricas">
+                        <div class="tarjeta-metrica">
+                            <small>Bicicleta</small>
+                            <strong>3.2 km</strong>
+                            <p>18 min</p>
+                        </div>
+                        <div class="tarjeta-metrica verde">
+                            <small>CO₂ Ahorrado</small>
+                            <strong>1.2 kg</strong>
+                            <p>Ruta Óptima</p>
+                        </div>
+                    </div>
+
+                    <div class="bloque-indicaciones">
+                        <h3>INDICACIONES</h3>
+                        
+                        <div class="paso-indicacion">
+                            <span>⬆️</span>
+                            <div>
+                                <strong>Sigue por Av. Ciclista hacia el norte</strong>
+                                <small>1.2 km</small>
+                            </div>
+                        </div>
+
+                        <div class="paso-indicacion">
+                            <span>↗️</span>
+                            <div>
+                                <strong>Gira a la derecha en Calle Verde</strong>
+                                <small>800 m</small>
+                            </div>
+                        </div>
+
+                        <div class="paso-indicacion">
+                            <span>🚸</span>
+                            <div>
+                                <strong>Cruza por el paso peatonal seguro</strong>
+                                <small>200 m</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-navegacion">
+                        ➔ Iniciar navegación
+                    </button>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
