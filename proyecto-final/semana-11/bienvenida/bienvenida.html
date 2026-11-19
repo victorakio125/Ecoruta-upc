@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F5FDFB">
+    <title>VistaConsciente | Bienvenida</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Iconografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+
+    <link rel="stylesheet" href="bienvenida.css">
+    <script src="bienvenida.js" defer></script>
+</head>
+<body>
+<main class="aplicacion-bienvenida">
+
+    <!-- PANTALLA 1: PRESENTACIÓN -->
+    <section class="pantalla pantalla-bienvenida activa" id="pantalla-bienvenida" aria-label="Bienvenida">
+        <div class="contenido-bienvenida">
+            <header class="marca">
+                <div class="marca-icono"><span class="material-symbols-outlined">visibility</span></div>
+                <div class="marca-texto">
+                    <span class="marca-subtitulo">BIENESTAR VISUAL</span>
+                    <span class="marca-nombre">VistaConsciente</span>
+                </div>
+            </header>
+
+            <div class="mensaje-bienvenida">
+                <p class="texto-etiqueta">BIENVENIDO A VISTACONSCIENTE</p>
+                <h1>Tus ojos también <br class="salto-escritorio">merecen una pausa.</h1>
+                <p class="descripcion-bienvenida">
+                    Encuentra un ritmo más saludable para estudiar, trabajar y disfrutar de tus pantallas sin descuidar tu bienestar visual.
+                </p>
+                <div class="acciones-bienvenida">
+                    <button type="button" class="boton boton-principal" data-ir="pantalla-perfil">
+                        Comenzar <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <a href="../inicio/inicio.html" class="boton boton-secundario">Ya tengo mi perfil</a>
+                </div>
+            </div>
+            <p class="nota-bienvenida">Sin cuentas ni contraseñas. Tu experiencia comienza aquí.</p>
+        </div>
+
+        <aside class="panel-beneficios">
+            <div class="decoracion decoracion-externa"></div>
+            <div class="decoracion decoracion-interna"></div>
+            <div class="contenido-panel">
+                <div class="panel-icono"><span class="material-symbols-outlined">visibility</span></div>
+                <h2>Un mejor ritmo de estudio <br class="salto-escritorio">también cuida tus ojos.</h2>
+                <div class="lista-beneficios">
+                    <div class="beneficio">Pausas inteligentes</div>
+                    <div class="beneficio">Seguimiento visual</div>
+                    <div class="beneficio">Consejos personalizados</div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="beneficios-movil" aria-label="Beneficios">
+            <article class="beneficio-movil">
+                <span class="material-symbols-outlined">schedule</span>
+                <p>Pausas a tu ritmo</p>
+            </article>
+            <article class="beneficio-movil">
+                <span class="material-symbols-outlined">visibility</span>
+                <p>Hábitos saludables</p>
+            </article>
+            <article class="beneficio-movil">
+                <span class="material-symbols-outlined">article</span>
+                <p>Seguimiento simple</p>
+            </article>
+        </section>
+
+        <footer class="acciones-movil">
+            <button type="button" class="boton boton-principal boton-comenzar-movil" data-ir="pantalla-perfil">
+                Comenzar <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+            <a href="../inicio/inicio.html" class="enlace-perfil">Ya tengo mi perfil configurado</a>
+            <p>Sin cuentas ni contraseñas. Tu experiencia comienza aquí.</p>
+        </footer>
+    </section>
+
+
+    <!-- PANTALLA 2: PERFIL VISUAL -->
+    <section class="pantalla pantalla-configuracion" id="pantalla-perfil" aria-label="Configuración del perfil visual" hidden>
+        <header class="encabezado-configuracion">
+            <div class="marca-configuracion">
+                <span class="material-symbols-outlined">visibility</span>
+                <span>VistaConsciente</span>
+            </div>
+            <span class="indicador-paso">Paso 1 de 2</span>
+        </header>
+
+        <div class="barra-progreso" role="progressbar" aria-label="Progreso de configuración" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <div class="progreso progreso-mitad"></div>
+        </div>
+
+        <div class="tarjeta-configuracion">
+            <div class="introduccion-configuracion">
+                <p class="texto-etiqueta">PERFIL VISUAL</p>
+                <h1>Conozcamos un poco mejor tu vista</h1>
+                <p class="descripcion-configuracion">Esto nos permite adaptar las pausas y recomendaciones a tus necesidades.</p>
+            </div>
+
+            <div class="opciones-perfil">
+                <div class="tarjeta-opcion tarjeta-lentes">
+                    <div class="icono-opcion"><span class="material-symbols-outlined">eyeglasses</span></div>
+                    <div class="texto-opcion">
+                        <h2>¿Usas lentes?</h2>
+                        <p>Incluye lentes de contacto</p>
+                    </div>
+                    <label class="interruptor" aria-label="¿Usas lentes?">
+                        <input type="checkbox" id="usa-lentes">
+                        <span class="interruptor-deslizador"></span>
+                    </label>
+                </div>
+
+                <div class="tarjeta-opcion tarjeta-antecedentes">
+                    <h2>Antecedentes visuales</h2>
+                    <p class="ayuda-antecedentes">Selecciona todos los que apliquen.</p>
+                    <div class="opciones-antecedentes">
+                        <label class="opcion-antecedente">
+                            <input type="checkbox" name="antecedente" value="miopia" checked>
+                            <span>Miopía</span>
+                        </label>
+                        <label class="opcion-antecedente">
+                            <input type="checkbox" name="antecedente" value="astigmatismo">
+                            <span>Astigmatismo</span>
+                        </label>
+                        <label class="opcion-antecedente">
+                            <input type="checkbox" name="antecedente" value="hipermetropia">
+                            <span>Hipermetropía</span>
+                        </label>
+                        <label class="opcion-antecedente">
+                            <input type="checkbox" name="antecedente" value="ojo-seco">
+                            <span>Ojo seco</span>
+                        </label>
+                        <label class="opcion-antecedente">
+                            <input type="checkbox" name="antecedente" value="ninguno">
+                            <span>Ninguno</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="acciones-configuracion">
+                    <button type="button" class="boton-continuar" data-ir="pantalla-descansos">
+                        Continuar <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PANTALLA 3: PREFERENCIAS DE DESCANSO -->
+    <section class="pantalla pantalla-configuracion" id="pantalla-descansos" aria-label="Configuración de descansos" hidden>
+        <header class="encabezado-configuracion">
+            <div class="marca-configuracion">
+                <span class="material-symbols-outlined">visibility</span>
+                <span>VistaConsciente</span>
+            </div>
+            <span class="indicador-paso">Paso 2 de 2</span>
+        </header>
+
+        <div class="barra-progreso" role="progressbar" aria-label="Progreso de configuración" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+            <div class="progreso progreso-completo"></div>
+        </div>
+
+        <div class="tarjeta-configuracion tarjeta-descansos">
+            <div class="introduccion-configuracion">
+                <p class="texto-etiqueta">TUS DESCANSOS</p>
+                <h1>Crea un ritmo que funcione para ti</h1>
+                <p class="descripcion-configuracion">Podrás cambiar estas preferencias cuando quieras desde tu perfil.</p>
+            </div>
+
+            <div class="opciones-descansos">
+                <div class="panel-deslizadores">
+                    <div class="control-deslizador">
+                        <div class="encabezado-deslizador">
+                            <label for="frecuencia-descanso">Descansar cada</label>
+                            <button type="button" class="valor-deslizador valor-editable" id="valor-frecuencia" aria-label="Editar minutos entre descansos" title="Presiona para escribir un tiempo personalizado">45 min</button>
+                        </div>
+                        <input type="range" id="frecuencia-descanso" min="1" max="120" step="1" value="45">
+                        <div class="editor-tiempo" id="editor-tiempo" hidden>
+                            <label for="tiempo-personalizado">Minutos personalizados</label>
+                            <input type="number" id="tiempo-personalizado" min="1" max="120" step="1" inputmode="numeric" placeholder="Ej. 90">
+                            <button type="button" id="guardar-tiempo">Guardar</button>
+                            <button type="button" id="cancelar-tiempo" class="cancelar-tiempo">Cancelar</button>
+                            <small id="error-tiempo" role="alert"></small>
+                        </div>
+                    </div>
+
+                    <div class="control-deslizador">
+                        <div class="encabezado-deslizador">
+                            <label for="duracion-descanso">Duración de cada pausa</label>
+                            <output class="valor-deslizador" id="valor-duracion" for="duracion-descanso">5 min</output>
+                        </div>
+                        <input type="range" id="duracion-descanso" min="1" max="60" step="1" value="5">
+                    </div>
+
+                    <div class="control-deslizador">
+                        <div class="encabezado-deslizador">
+                            <label for="meta-diaria">Meta diaria</label>
+                            <output class="valor-deslizador" id="valor-meta" for="meta-diaria">5 pausas</output>
+                        </div>
+                        <input type="range" id="meta-diaria" min="1" max="20" step="1" value="5">
+                    </div>
+                </div>
+
+                <div class="tarjeta-recomendacion">
+                    <h2>Recomendación inicial</h2>
+                    <p id="texto-recomendacion">Para estudio prolongado sugerimos una pausa de 5 minutos cada 45 minutos. Tu meta diaria es realizar 5 pausas.</p>
+                </div>
+
+                <div class="acciones-descansos">
+                    <button type="button" class="boton-atras" data-ir="pantalla-perfil">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Atrás
+                    </button>
+                    <a href="../inicio/inicio.html" class="boton-continuar boton-finalizar">
+                        Comenzar <span class="material-symbols-outlined">check</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
